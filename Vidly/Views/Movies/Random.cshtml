@@ -1,0 +1,12 @@
+﻿@model Vidly.ViewModels.RandomViewModel
+@{
+    ViewBag.Title = "Random";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.Movie.Name</h2>
+@foreach (var item in Model.Customers)
+{
+    
+    <h1>@Html.ActionLink(item.Name,"Details","Movies",new {id=item.Id},null)</h1>
+}
